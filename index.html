@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>星稀 - 官方私域页面</title>
+  <style>
+    body { margin: 0; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Helvetica Neue', sans-serif; color: #333; background: #fff; }
+    header { background: #000; color: #fff; padding: 20px; text-align: center; }
+    header h1 { margin: 0; font-size: 24px; }
+    nav { display: flex; justify-content: center; gap: 40px; margin-top: 10px; }
+    nav a { color: #ccc; text-decoration: none; font-size: 16px; }
+    .banner { background: url('https://via.placeholder.com/1200x400') center/cover no-repeat; color: #fff; text-align: center; padding: 80px 20px; }
+    .banner h2 { font-size: 36px; margin: 0; }
+    .section { padding: 60px 20px; max-width: 1000px; margin: auto; }
+    .section h3 { font-size: 28px; margin-bottom: 20px; }
+    .products { display: flex; gap: 30px; flex-wrap: wrap; justify-content: center; }
+    .product { width: 280px; border: 1px solid #eee; border-radius: 10px; padding: 20px; text-align: center; }
+    .product img { width: 100%; border-radius: 10px; }
+    .product h4 { margin: 10px 0 5px; }
+    .product p { font-size: 14px; color: #555; }
+    .product button { margin-top: 10px; padding: 10px 20px; background: #000; color: #fff; border: none; border-radius: 5px; cursor: pointer; }
+    .about { text-align: center; }
+    .qrcode { text-align: center; margin-top: 40px; }
+    .qrcode img { width: 160px; }
+    footer { background: #f2f2f2; text-align: center; padding: 20px; font-size: 14px; color: #999; }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>星稀</h1>
+    <nav>
+      <a href="#products">产品</a>
+      <a href="#about">品牌故事</a>
+      <a href="#contact">联系我们</a>
+    </nav>
+  </header>
+
+  <div class="banner">
+    <h2>探索你的专属星光之选</h2>
+  </div>
+
+  <section id="products" class="section">
+    <h3>精选产品</h3>
+    <div class="products">
+      <div class="product">
+        <img src="https://via.placeholder.com/280x180" alt="产品1">
+        <h4>星稀香氛蜡烛</h4>
+        <p>带来静谧夜晚的疗愈气息。</p>
+        <button onclick="window.location.href='weixin://'">加微信购买</button>
+      </div>
+      <div class="product">
+        <img src="https://via.placeholder.com/280x180" alt="产品2">
+        <h4>星稀月光护肤油</h4>
+        <p>让肌肤在夜晚修护如新。</p>
+        <button onclick="window.location.href='weixin://'">加微信购买</button>
+      </div>
+    </div>
+  </section>
+
+  <section id="about" class="section about">
+    <h3>关于星稀</h3>
+    <p>「星稀」致力于打造融合自然灵感与感官疗愈的生活方式品牌。我们相信每一位用户都值得拥有一份属于自己的宁静与美好。</p>
+  </section>
+
+  <section id="contact" class="section qrcode">
+    <h3>扫码加微信</h3>
+    <img src="https://via.placeholder.com/160" alt="微信二维码">
+    <p>获取更多产品信息与专属服务</p>
+  </section>
+
+  <footer>
+    © 2025 星稀. 保留所有权利.
+  </footer>
+</body>
+</html>
