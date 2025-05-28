@@ -1,29 +1,110 @@
 <!DOCTYPE html>
 <html lang="zh">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>星稀 - 官方私域页面</title>
   <style>
-    body { margin: 0; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Helvetica Neue', sans-serif; color: #333; background: #fff; }
-    header { background: #000; color: #fff; padding: 20px; text-align: center; }
-    header h1 { margin: 0; font-size: 24px; }
-    nav { display: flex; justify-content: center; gap: 40px; margin-top: 10px; }
-    nav a { color: #ccc; text-decoration: none; font-size: 16px; }
-    .banner { background: url('https://via.placeholder.com/1200x400') center/cover no-repeat; color: #fff; text-align: center; padding: 80px 20px; }
-    .banner h2 { font-size: 36px; margin: 0; }
-    .section { padding: 60px 20px; max-width: 1000px; margin: auto; }
-    .section h3 { font-size: 28px; margin-bottom: 20px; }
-    .products { display: flex; gap: 30px; flex-wrap: wrap; justify-content: center; }
-    .product { width: 280px; border: 1px solid #eee; border-radius: 10px; padding: 20px; text-align: center; }
-    .product img { width: 100%; border-radius: 10px; }
-    .product h4 { margin: 10px 0 5px; }
-    .product p { font-size: 14px; color: #555; }
-    .product button { margin-top: 10px; padding: 10px 20px; background: #000; color: #fff; border: none; border-radius: 5px; cursor: pointer; }
-    .about { text-align: center; }
-    .qrcode { text-align: center; margin-top: 40px; }
-    .qrcode img { width: 160px; }
-    footer { background: #f2f2f2; text-align: center; padding: 20px; font-size: 14px; color: #999; }
+    body {
+      margin: 0;
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Helvetica Neue', sans-serif;
+      color: #333;
+      background: #fff;
+    }
+    header {
+      background: #000;
+      color: #fff;
+      padding: 20px;
+      text-align: center;
+    }
+    header h1 {
+      margin: 0;
+      font-size: 24px;
+    }
+    nav {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 30px;
+      margin-top: 10px;
+    }
+    nav a {
+      color: #ccc;
+      text-decoration: none;
+      font-size: 16px;
+    }
+    .banner {
+      background: url('https://via.placeholder.com/1200x400') center/cover no-repeat;
+      color: #fff;
+      text-align: center;
+      padding: 80px 20px;
+    }
+    .banner h2 {
+      font-size: 36px;
+      margin: 0;
+    }
+    .section {
+      padding: 60px 20px;
+      max-width: 1000px;
+      margin: auto;
+    }
+    .section h3 {
+      font-size: 28px;
+      margin-bottom: 20px;
+    }
+    .products {
+      display: flex;
+      gap: 30px;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+    .product {
+      width: 280px;
+      border: 1px solid #eee;
+      border-radius: 10px;
+      padding: 20px;
+      text-align: center;
+    }
+    .product img {
+      width: 100%;
+      border-radius: 10px;
+    }
+    .product h4 {
+      margin: 10px 0 5px;
+    }
+    .product p {
+      font-size: 14px;
+      color: #555;
+    }
+    .product button {
+      margin-top: 10px;
+      padding: 10px 20px;
+      background: #000;
+      color: #fff;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+    .about, .qrcode {
+      text-align: center;
+    }
+    .qrcode img {
+      width: 160px;
+    }
+    footer {
+      background: #f2f2f2;
+      text-align: center;
+      padding: 20px;
+      font-size: 14px;
+      color: #999;
+    }
+    @media (max-width: 600px) {
+      nav { flex-direction: column; gap: 10px; }
+      .products { flex-direction: column; align-items: center; }
+      .product { width: 90%; }
+      .banner h2 { font-size: 24px; }
+      .section h3 { font-size: 22px; }
+    }
   </style>
 </head>
 <body>
@@ -31,7 +112,10 @@
     <h1>星稀</h1>
     <nav>
       <a href="#products">产品</a>
+      <a href="#product-detail">产品详情</a>
       <a href="#about">品牌故事</a>
+      <a href="#company">公司简介</a>
+      <a href="#faq">常见问题</a>
       <a href="#contact">联系我们</a>
     </nav>
   </header>
@@ -44,18 +128,28 @@
     <h3>精选产品</h3>
     <div class="products">
       <div class="product">
-        <img src="https://via.placeholder.com/280x180" alt="产品1">
+        <img src="https://via.placeholder.com/280x180" alt="产品1" />
         <h4>星稀香氛蜡烛</h4>
         <p>带来静谧夜晚的疗愈气息。</p>
-        <button onclick="window.location.href='weixin://'">加微信购买</button>
+        <button onclick="alert('请长按页面下方二维码添加微信')">加微信购买</button>
       </div>
       <div class="product">
-        <img src="https://via.placeholder.com/280x180" alt="产品2">
+        <img src="https://via.placeholder.com/280x180" alt="产品2" />
         <h4>星稀月光护肤油</h4>
         <p>让肌肤在夜晚修护如新。</p>
-        <button onclick="window.location.href='weixin://'">加微信购买</button>
+        <button onclick="alert('请长按页面下方二维码添加微信')">加微信购买</button>
       </div>
     </div>
+  </section>
+
+  <section id="product-detail" class="section">
+    <h3>产品详情</h3>
+    <p>星稀香氛蜡烛采用天然大豆蜡与进口精油，燃烧时间长达40小时。月光护肤油蕴含植物修护因子，适合夜间修护，提升肌肤光泽感。</p>
+    <ul>
+      <li>天然成分，无添加</li>
+      <li>适合敏感肌使用</li>
+      <li>独特包装设计，适合作为礼物</li>
+    </ul>
   </section>
 
   <section id="about" class="section about">
@@ -63,9 +157,29 @@
     <p>「星稀」致力于打造融合自然灵感与感官疗愈的生活方式品牌。我们相信每一位用户都值得拥有一份属于自己的宁静与美好。</p>
   </section>
 
+  <section id="company" class="section">
+    <h3>公司简介</h3>
+    <p>星稀品牌隶属于「星语自然生活有限公司」，总部位于上海。我们致力于将东方植物疗愈理念融入现代生活，为用户提供自然、安心、有效的产品体验。</p>
+    <p>公司创立于2022年，目前已服务超过10万+用户，拥有稳定的供应链与研发团队。</p>
+  </section>
+
+  <section id="faq" class="section">
+    <h3>常见问题</h3>
+    <div>
+      <strong>Q: 产品适合什么肤质？</strong>
+      <p>A: 所有产品为温和配方，适合各种肤质，尤其是敏感肌。</p>
+
+      <strong>Q: 发货和配送时间？</strong>
+      <p>A: 支持全国顺丰配送，72小时内发货。</p>
+
+      <strong>Q: 可以退换货吗？</strong>
+      <p>A: 未拆封产品7天内支持无理由退换。</p>
+    </div>
+  </section>
+
   <section id="contact" class="section qrcode">
     <h3>扫码加微信</h3>
-    <img src="https://via.placeholder.com/160" alt="微信二维码">
+    <img src="https://via.placeholder.com/160" alt="微信二维码" />
     <p>获取更多产品信息与专属服务</p>
   </section>
 
