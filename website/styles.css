@@ -1,0 +1,373 @@
+/*
+ * Global styles for Duratact consumer website. The colour palette is
+ * inspired by tactical equipment: deep greens, muted tans and earthy
+ * browns. Layouts are responsive, leveraging CSS grid and flexbox to
+ * gracefully adapt to screens of all sizes. Scroll down to the bottom
+ * to see product page styles.
+ */
+
+:root {
+  --primary-color: #58634a; /* olive green */
+  --secondary-color: #a79d80; /* tan */
+  --dark-color: #0f1b18; /* dark green/black */
+  --light-color: #ffffff;
+  --accent-color: #8c6239; /* warm brown */
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Open Sans', sans-serif;
+  line-height: 1.6;
+  color: var(--light-color);
+  background-color: var(--dark-color);
+}
+
+.container {
+  width: 90%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* Header */
+header {
+  background-color: rgba(15, 27, 24, 0.95);
+  position: fixed;
+  width: 100%;
+  top: 0;
+  left: 0;
+  z-index: 100;
+}
+
+header .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 0;
+}
+
+.logo span {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--light-color);
+}
+
+.nav ul {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+}
+
+.nav ul li a {
+  color: var(--light-color);
+  text-decoration: none;
+  font-weight: 600;
+  transition: color 0.3s;
+}
+
+.nav ul li a:hover {
+  color: var(--accent-color);
+}
+
+/* Mobile navigation toggle */
+.nav-toggle {
+  display: none;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+.nav-toggle .hamburger,
+.nav-toggle .hamburger::before,
+.nav-toggle .hamburger::after {
+  width: 25px;
+  height: 3px;
+  background-color: var(--light-color);
+  display: block;
+  position: relative;
+  transition: all 0.3s;
+}
+
+.nav-toggle .hamburger::before,
+.nav-toggle .hamburger::after {
+  content: '';
+  position: absolute;
+  left: 0;
+}
+
+.nav-toggle .hamburger::before {
+  top: -8px;
+}
+
+.nav-toggle .hamburger::after {
+  top: 8px;
+}
+
+/* Hero Section */
+.hero {
+  height: 100vh;
+  background: url('assets/bag_small.jpg') center center/cover no-repeat;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.hero::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(15, 27, 24, 0.6);
+}
+
+.hero .hero-content {
+  position: relative;
+  color: var(--light-color);
+  padding: 0 20px;
+}
+
+.hero h1 {
+  font-size: 3rem;
+  margin-bottom: 20px;
+}
+
+.hero p {
+  font-size: 1.2rem;
+  margin-bottom: 30px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+
+.cta-btn {
+  background-color: var(--accent-color);
+  color: var(--light-color);
+  padding: 12px 30px;
+  border-radius: 4px;
+  text-decoration: none;
+  font-weight: 600;
+  transition: background-color 0.3s;
+}
+
+.cta-btn:hover {
+  background-color: var(--secondary-color);
+  color: var(--dark-color);
+}
+
+/* Sections */
+.section {
+  padding: 80px 0;
+}
+
+.section h2 {
+  font-size: 2rem;
+  margin-bottom: 30px;
+  text-align: center;
+  color: var(--secondary-color);
+}
+
+/* About */
+.about p {
+  max-width: 700px;
+  margin: 0 auto;
+  text-align: center;
+  color: var(--light-color);
+  line-height: 1.7;
+}
+
+/* Products */
+.product-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 40px;
+}
+
+.product-card {
+  background-color: rgba(0, 0, 0, 0.3);
+  border-radius: 8px;
+  overflow: hidden;
+  padding-bottom: 20px;
+  transition: transform 0.3s;
+}
+
+.product-card:hover {
+  transform: translateY(-5px);
+}
+
+.product-card img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  display: block;
+}
+
+.product-card h3 {
+  margin: 15px;
+  color: var(--light-color);
+}
+
+.product-card p {
+  margin: 0 15px 15px;
+  color: var(--secondary-color);
+  font-size: 0.95rem;
+  min-height: 70px;
+}
+
+.btn {
+  display: inline-block;
+  margin: 0 15px;
+  background-color: var(--accent-color);
+  color: var(--light-color);
+  padding: 10px 20px;
+  border-radius: 4px;
+  text-decoration: none;
+  font-weight: 600;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.btn:hover {
+  background-color: var(--secondary-color);
+  color: var(--dark-color);
+}
+
+/* Contact */
+.contact .form-group {
+  margin-bottom: 20px;
+}
+
+.contact label {
+  display: block;
+  margin-bottom: 8px;
+  color: var(--light-color);
+  font-size: 0.9rem;
+}
+
+.contact input,
+.contact textarea {
+  width: 100%;
+  padding: 10px;
+  border: none;
+  border-radius: 4px;
+  background-color: rgba(255, 255, 255, 0.1);
+  color: var(--light-color);
+}
+
+.contact input:focus,
+.contact textarea:focus {
+  outline: 2px solid var(--accent-color);
+}
+
+/* Footer */
+footer {
+  background-color: rgba(0, 0, 0, 0.5);
+  padding: 20px 0;
+  text-align: center;
+  color: var(--secondary-color);
+  margin-top: 40px;
+}
+
+/* Responsive navigation */
+@media (max-width: 768px) {
+  .nav {
+    position: absolute;
+    top: 100%;
+    right: 0;
+    background-color: rgba(15, 27, 24, 0.95);
+    width: 200px;
+    display: none;
+    flex-direction: column;
+    gap: 20px;
+    padding: 20px;
+  }
+
+  .nav.open {
+    display: flex;
+  }
+
+  .nav ul {
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .nav-toggle {
+    display: block;
+  }
+}
+
+/* Product Pages */
+.product-hero {
+  background-color: var(--dark-color);
+  padding: 140px 0 40px;
+  text-align: center;
+  color: var(--secondary-color);
+  margin-top: 60px;
+}
+
+.product-detail {
+  padding: 60px 0;
+}
+
+.product-detail-grid {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 40px;
+}
+
+.product-detail-grid img {
+  width: 100%;
+  max-width: 500px;
+  border-radius: 8px;
+  object-fit: cover;
+}
+
+.product-info {
+  flex: 1;
+}
+
+.product-info h2 {
+  margin-bottom: 20px;
+  color: var(--secondary-color);
+}
+
+.product-info p {
+  margin-bottom: 20px;
+  line-height: 1.7;
+}
+
+.features {
+  list-style: disc;
+  margin-left: 20px;
+  margin-bottom: 20px;
+  color: var(--secondary-color);
+}
+
+/* Secondary button */
+.secondary-btn {
+  background-color: transparent;
+  border: 2px solid var(--accent-color);
+  color: var(--accent-color);
+  padding: 10px 20px;
+  border-radius: 4px;
+  text-decoration: none;
+  font-weight: 600;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.secondary-btn:hover {
+  background-color: var(--accent-color);
+  color: var(--light-color);
+}
+
+@media (max-width: 768px) {
+  .product-detail-grid {
+    flex-direction: column;
+  }
+}
